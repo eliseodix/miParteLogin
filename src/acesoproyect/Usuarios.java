@@ -3,9 +3,11 @@ package acesoproyect;
 
 
 
+import java.awt.Color;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.UIManager;
+
 
 /**
  *
@@ -14,12 +16,17 @@ import javax.swing.UIManager;
 public class Usuarios extends javax.swing.JFrame {
       
     private boolean verContraseña = true;
+    
+    
     /**
      * Creates new form Usuarios
      */
     public Usuarios() {
         initComponents();
        this.setLocationRelativeTo(null);
+       this.setResizable(false);
+       
+       
      
        
     }
@@ -53,10 +60,13 @@ public class Usuarios extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JTextField();
         btnInicio = new javax.swing.JButton();
         txtContraseña = new javax.swing.JPasswordField();
-        jButton3 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        jLabel4 = new javax.swing.JLabel();
 
         registroUsuario.setTitle("BASE DE REGISTRO");
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
@@ -72,6 +82,7 @@ public class Usuarios extends javax.swing.JFrame {
 
         txtRegistrarContraseña.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         txtRegistrarContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        txtRegistrarContraseña.setToolTipText("Contraseña");
         txtRegistrarContraseña.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, null));
         txtRegistrarContraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +92,7 @@ public class Usuarios extends javax.swing.JFrame {
 
         txtRegistrarUsuario.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         txtRegistrarUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        txtRegistrarUsuario.setToolTipText("Usuario");
         txtRegistrarUsuario.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, null));
         txtRegistrarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +100,7 @@ public class Usuarios extends javax.swing.JFrame {
             }
         });
 
+        btnRegistar.setBackground(new java.awt.Color(51, 0, 50));
         btnRegistar.setText("REGISTRAR");
         btnRegistar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +108,7 @@ public class Usuarios extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(51, 0, 50));
         jButton2.setText("LISTO");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +118,7 @@ public class Usuarios extends javax.swing.JFrame {
 
         jSeparator2.setForeground(new java.awt.Color(51, 51, 51));
 
+        btnCerrar.setBackground(new java.awt.Color(51, 0, 50));
         btnCerrar.setText("CERRAR");
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,9 +133,9 @@ public class Usuarios extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(155, 155, 155)
                 .addComponent(jLabel6)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -155,9 +170,9 @@ public class Usuarios extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtRegistrarContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegistar)
+                    .addComponent(btnRegistar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2)
                     .addComponent(btnCerrar))
                 .addGap(55, 55, 55))
@@ -176,9 +191,11 @@ public class Usuarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panelLoguin.setBackground(new java.awt.Color(204, 204, 255));
         panelLoguin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         panelLoguin.setToolTipText("");
 
+        jButton1.setBackground(new java.awt.Color(65, 0, 153));
         jButton1.setText("REGISTRAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,17 +210,40 @@ public class Usuarios extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("USUARIO:");
+        jLabel2.setToolTipText("");
+        jLabel2.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel2AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("CONTRASEÑA:");
+        jLabel3.setToolTipText("");
 
         txtUsuario.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        txtUsuario.setToolTipText("");
+        txtUsuario.setToolTipText("Ingresar Usuario");
         txtUsuario.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.black, null));
         txtUsuario.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        txtUsuario.setName("XF"); // NOI18N
+        txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtUsuarioMouseClicked(evt);
+            }
+        });
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
 
+        btnInicio.setBackground(new java.awt.Color(0, 0, 204));
         btnInicio.setText("INICIAR");
         btnInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,18 +253,20 @@ public class Usuarios extends javax.swing.JFrame {
 
         txtContraseña.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         txtContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        txtContraseña.setToolTipText("Ingresar contraseña");
         txtContraseña.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(0, 0, 0), null));
         txtContraseña.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-visible (1).gif"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        txtContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtContraseñaMouseClicked(evt);
             }
         });
 
         jSeparator1.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setText("Click para ver contraseña..");
 
         javax.swing.GroupLayout panelLoguinLayout = new javax.swing.GroupLayout(panelLoguin);
         panelLoguin.setLayout(panelLoguinLayout);
@@ -234,7 +276,7 @@ public class Usuarios extends javax.swing.JFrame {
                 .addGap(65, 65, 65)
                 .addGroup(panelLoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1)
-                    .addGroup(panelLoguinLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelLoguinLayout.createSequentialGroup()
                         .addGroup(panelLoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
@@ -246,9 +288,10 @@ public class Usuarios extends javax.swing.JFrame {
                                     .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE))
                             .addGroup(panelLoguinLayout.createSequentialGroup()
-                                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))))
+                                .addGroup(panelLoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(15, 15, 15))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoguinLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -273,12 +316,12 @@ public class Usuarios extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
-                .addGroup(panelLoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addGroup(panelLoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(btnInicio)
                 .addGap(63, 63, 63))
         );
@@ -338,6 +381,11 @@ public class Usuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
         String Rusuario = txtRegistrarUsuario.getText();
         String Rcontraseña = txtRegistrarContraseña.getText();
+           
+        if(Rusuario.isEmpty() || Rcontraseña.isEmpty()){
+            JOptionPane.showMessageDialog(null,"POR FAVOR COMPLETAR LOS CAMPOS");
+            return;
+        }
         
                BaseDatosTxt baseDatos = new BaseDatosTxt("archivo.txt");
         Registro registro = new Registro(baseDatos);
@@ -356,28 +404,49 @@ public class Usuarios extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
+        // TODO add your handling code here
+           int opcion = JOptionPane.showConfirmDialog(this, 
+                "OJO NO PUEDES USAR EL PROGRAMA SIN USUARIO \n ¿DECEAS CONTINUAR?",
+                "CONFIRMAR", JOptionPane.YES_NO_CANCEL_OPTION);
+        
+        if(opcion == JOptionPane.NO_OPTION){
+          registroUsuario.dispose();
+        }else if (opcion == JOptionPane.YES_OPTION){
+            JOptionPane.showMessageDialog(null, 
+                    "CONTINUA CON EL REGISTRO");
+        }
+    
+    
+    }//GEN-LAST:event_btnCerrarActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+     
+    }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void txtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseClicked
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_txtUsuarioMouseClicked
+
+    private void txtContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtContraseñaMouseClicked
         // TODO add your handling code here:
         if(verContraseña){
             txtContraseña.setEchoChar('*');
-            verContraseña= false;
+            verContraseña=false;
+            
         }else{
             txtContraseña.setEchoChar((char)0);
             verContraseña=true;
-        }
-       
-    }//GEN-LAST:event_jButton3ActionPerformed
+                    }
+    }//GEN-LAST:event_txtContraseñaMouseClicked
 
-    private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        // TODO add your handling code here
-         String mensaje="OJO SI NO TE REGISTRAS NO PUEDES HACER USO DEL PROGRAMA";
-        UIManager.put("OptionPane.wanrningIcon", new ImageIcon());
-        JOptionPane.showMessageDialog(null, mensaje,"ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
-        registroUsuario.dispose();
-      
-            
+    private void jLabel2AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel2AncestorAdded
+        // TODO add your handling code here:
         
-    }//GEN-LAST:event_btnCerrarActionPerformed
+    }//GEN-LAST:event_jLabel2AncestorAdded
 
     /**
      * @param args the command line arguments
@@ -420,10 +489,10 @@ public class Usuarios extends javax.swing.JFrame {
     private javax.swing.JButton btnRegistar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
