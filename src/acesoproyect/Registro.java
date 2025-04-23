@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 public class Registro {
     
    private BaseDatosTxt baseDatos;
+   
     
     public Registro(BaseDatosTxt baseDatos) {
         this.baseDatos = baseDatos;
